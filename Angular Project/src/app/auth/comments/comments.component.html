@@ -1,0 +1,23 @@
+<!-- 
+    <a class="glyphicon glyphicon-remove" style="color:aqua" (click)="deleteComment(commentdetail._id)"></a>
+    <span>{{commentdetail.commentbody}}</span>
+  
+</div>  -->
+<div class="container">
+<div *ngIf="toggleComments">
+    <div *ngFor='let comment of commentsToList'>
+        <div >
+          <p>{{comment.cmt_comment}} <button class="btn btn-secondary btn-xm btn-danger" (click)="deleteComment(comment._id)">Delete Comment</button></p>
+          
+        </div>
+    </div>
+  <div class="form-group">
+    <label for="comment">Comment:</label>
+    <textarea class="form-control" rows="2" id="comment" [(ngModel)]="cmtdetail.commentbody" name="commentbody" placeholder="Enter Comment" ></textarea>
+    <button class="btn btn-success" (click)="createComment()">Add Comment</button>
+  </div>
+
+</div>
+</div>
+
+

@@ -1,0 +1,15 @@
+<div class="container" >
+<div *ngIf="toggleEdit">
+
+  <div class="form-group">
+  <label for="title">Title</label>
+  <input type="text" name="title" class="form-control" [(ngModel)]="editClicked.title"  />
+  </div>
+  <div class="form-group">
+  <label for="description">Description</label>
+  <textarea name="description" rows="2"  class="form-control"  [(ngModel)]="editClicked.description" ></textarea>
+  <button type="submit"  (click)="updatePost(editClicked)">Update Post</button>
+  </div>
+  
+</div> 
+</div>

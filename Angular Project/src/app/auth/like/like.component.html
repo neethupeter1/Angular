@@ -1,0 +1,11 @@
+<!-- <button class="btn btn-primary btn-xm glyphicon glyphicon-thumbs-down" type="button" name="button" (click)="dislikes(post)"> </button> -->
+ 
+
+<div *ngIf="toggleLikes" >
+  
+  <div *ngFor='let like of likedata'>
+    
+      <p>{{like.like_username}} </p> 
+    
+  </div>
+</div>
