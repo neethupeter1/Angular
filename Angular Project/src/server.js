@@ -67,7 +67,7 @@ app.post('/authenticate', function (req, res) {
                 var token = jwt.sign({
                     email: req.body.email
                 },  
-                'marlabs-secret-key', //secret key for encryption
+                'project-secret-key', //secret key for encryption
                 { expiresIn: '1h' }
             );
             res.send({ 
@@ -99,7 +99,7 @@ app.use(function(req,res,next) {
     console.log("token ",req.body.token);
     var token = req.body.token || req.query.token || req.headers.token;
     if(token ){
-        jwt.verify(token, 'marlabs-secret-key', function(err,decoded) {
+        jwt.verify(token, 'project-secret-key', function(err,decoded) {
             if(!err){
                 // console.log('Hey checking!!',decoded);
                 req.decoded=decoded;
