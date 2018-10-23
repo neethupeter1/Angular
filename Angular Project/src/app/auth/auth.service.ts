@@ -152,38 +152,8 @@ export class AuthService {
 
 
   logout() {
-    this._router.navigate(['/login']); 
-    
+    this._router.navigate(['/login']);   
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -191,31 +161,6 @@ export class AuthService {
   insertComment(commentdata) {
     return this._http.post('http://localhost:3000/insertComments', commentdata);
   }
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-
-
-
-  
-  
-  // insertComment(commentdata) {
-  //   return this._http.post('https://localhost:3000/addComment', commentdata);
-  // }
-
- 
-  
 
   }
   
